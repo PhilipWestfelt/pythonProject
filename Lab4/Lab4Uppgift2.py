@@ -33,7 +33,7 @@ def find_first_email_and_rest(text):
     if name_end == at_index:
         return None, text[at_index+1:len(text)]
     return text[name_start: name_end], text[name_end:len(text)]
-print("WOAWLAWLAWOAWOl")
+
 
 def find_all_emails(text):
     while i < length:
