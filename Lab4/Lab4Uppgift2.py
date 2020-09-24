@@ -1,4 +1,4 @@
-import re
+import re        #Regular Expression
 import string
 email_chars = string.ascii_letters + string.digits + '.'
 testmail1 = "Hej, philip.westfelt@gmail.com är min mailadress"
