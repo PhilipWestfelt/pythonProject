@@ -6,7 +6,7 @@ url2 = 'http://www.it.uu.se/katalog/bylastname/'
 url3 = ''
 
 
-def name(website):
+def text_search(website):
     try:
         file = urllib.request.urlopen(website)
         content = file.read()
@@ -29,9 +29,8 @@ def find_email(text):
 def find_links(text):
     return re.findall("([www]+\.[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)", text)
 
-def
 
-print(name(url2))
+print(text_search(url1))
 
 
 
