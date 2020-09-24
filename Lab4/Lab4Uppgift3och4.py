@@ -6,7 +6,7 @@ url2 = 'http://www.it.uu.se/katalog/bylastname/'
 url3 = 'http://user.it.uu.se/~joachim/'
 url4 = 'http://www.svd.se/'
 
-import time
+
 def text_search(website):
     try:
         file = urllib.request.urlopen(website)
@@ -46,7 +46,7 @@ print_list(list2)
 print("Remove duplicates")
 list2 = remove_duplicates(list2)
 print_list(list2)
-time.sleep(5)
+
 
 
 
