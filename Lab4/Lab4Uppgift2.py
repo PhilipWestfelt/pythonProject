@@ -1,7 +1,8 @@
+import re
 import string
 email_chars = string.ascii_letters + string.digits + '.'
 testmail1 = "Hej, philip.westfelt@gmail.com är min mailadress"
-testmail2 = "svara till joachim@hotmail.com eller pella@gmail.com"
+testmail2 = "Svara till joachim@hotmail.com eller pella@gmail.com"
 testmail3 = "Denna sträng innehåller ingen mailadress"
 testmail4 = "Denna sträng innehåller @hej men ingen mailadress"
 testmail5 = "Lorem Ipsum @is simply dummy text of the printing and@go typesetting"
@@ -37,7 +38,6 @@ def find_first_email_and_rest(text):
     return text[name_start: name_end], text[name_end:len(text)]
 
 
-import re
 def find_email(text):
     return re.findall("([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)", text)
 
@@ -46,6 +46,7 @@ def test_find_first_email_and_rest():
     testlista = [testmail1,testmail2,testmail3,testmail4,testmail5,testmail6,testmail7]
     for test in testlista:
         print(test)
-        print(google(test))
+        print(find_email(test))
         print("\n")
+
 test_find_first_email_and_rest()
