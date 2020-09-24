@@ -1,4 +1,4 @@
-import re
+import re        #Regular Expression
 import urllib.request, ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 url1 = 'http://www.dn.se/'
@@ -29,19 +29,9 @@ def find_email(text):
 def find_links(text):
     return re.findall("([www]+\.[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)", text)
 
-
+def
 
 print(name(url2))
-
-
-
-
-
-
-
-
-
-
 
 
 
