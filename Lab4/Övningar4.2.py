@@ -7,7 +7,7 @@ url2 = 'http://www.svd.se/'
 #text = content.decode('utf-8')
 
 
-def name(website,leaders):
+def name(website):
     try:
         file = urllib.request.urlopen(website)
         content = file.read()
