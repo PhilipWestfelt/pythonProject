@@ -1,10 +1,5 @@
 import string
 email_chains = string.ascii_letters + string.digits + '.'
-testmail1 = "Hej, philip.westfelt@gmail.com är min mailadress"
-testmail2 = "svara till joachim@hotmailö.com eller pella@gmail.com"
-testmail3 = "Denna sträng innehåller ingen mailadress"
-testmail4 = "Denna sträng innehåller @hej men ingen mailadress"
-
 
 def find_name_start(text, at_index):
     first_index = 0
@@ -24,7 +19,6 @@ def find_name_end(text, at_index):
 
 def find_first_email_and_rest(text):
     at_index = text.find('@')
-
     if at_index < 0:
         return None, None
     name_start = find_name_start(text, at_index)
@@ -33,7 +27,6 @@ def find_first_email_and_rest(text):
     name_end = find_name_end(text, at_index)
     if name_end == at_index:
         return None, text[at_index+1:len(text)]
-
     return text[name_start: name_end], text[name_end:len(text)]
 
 
